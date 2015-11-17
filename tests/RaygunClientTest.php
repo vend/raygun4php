@@ -132,7 +132,7 @@ class RaygunClientTest extends PHPUnit_Framework_TestCase
 
   public function testToJsonRemoveUnicodeSequences()
   {
-    $client = new \Raygun4php\RaygunClient('foo');
+    $client = new RaygunClient('foo');
 
     $data = array(
       'bar' => 'baz',
@@ -146,7 +146,7 @@ class RaygunClientTest extends PHPUnit_Framework_TestCase
 
   public function testFilterParamsFromMessage()
   {
-    $client = new \Raygun4php\RaygunClient('foo');
+    $client = new RaygunClient('foo');
 
     $message = $this->getMockBuilder('Raygun4php\RagunMessage')->getMock();
 
@@ -158,7 +158,7 @@ class RaygunClientTest extends PHPUnit_Framework_TestCase
 
   public function testCanSetAndFilterParams()
   {
-    $client = new \Raygun4php\RaygunClient('foo');
+    $client = new RaygunClient('foo');
 
     $params = array(
       'bar' => 'baz',
@@ -174,7 +174,7 @@ class RaygunClientTest extends PHPUnit_Framework_TestCase
 
   public function testCanSetAndGetProxy()
   {
-    $client = new \Raygun4php\RaygunClient('foo');
+    $client = new RaygunClient('foo');
 
     $proxy = 'bar';
 
